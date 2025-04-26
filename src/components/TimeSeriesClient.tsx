@@ -39,7 +39,6 @@ const fetchData = (setRefreshing: Dispatch<SetStateAction<boolean>>, setDataStat
             .from<string, TimeSeriesData>("people_counter")
             .select("id, created_at, people_count")
             .order("created_at", { ascending: true })
-            .limit(100)
         if (error) {
             console.error("Supabase fetch error:", error)
         } else {
