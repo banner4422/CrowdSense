@@ -60,7 +60,7 @@ interface TimeSeriesClientProps {
 }
 
 export default function TimeSeriesClient({ data }: TimeSeriesClientProps) {
-    const [threshold, setThreshold] = useState(100)
+    const [threshold, setThreshold] = useState(10)
     const [dataState, setDataState] = useState<TimeSeriesData[]>(data)
     const [refreshing, setRefreshing] = useState(false)
     const [lastRefreshed, setLastRefreshed] = useState<Date | null>(null)
